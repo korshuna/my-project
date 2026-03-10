@@ -15,7 +15,7 @@ jobs:
       - name: Secure Update
         run: |
           # 1. Рандомна затримка
-          sleep $((RANDOM % 1800))
+          sleep $((RANDOM % 1000))
           
           # 2. Шанс на пропуск для органічного вигляду (20%)
           if [ $((RANDOM % 10)) -lt 2 ]; then
@@ -43,7 +43,7 @@ jobs:
           echo "$(tail -n 45 node_status.json)" > node_status.json
 
           # 6. Налаштування Git та Пуш
-          git config --local user.email "action@github.com"
+          git config --local user.email "samarasergej545@gmail.com"
           git config --local user.name "GitHub Action Bot"
           
           git add node_status.json
